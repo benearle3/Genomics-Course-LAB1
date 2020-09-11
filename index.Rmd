@@ -16,3 +16,9 @@ https://benearle3.rstudio.cloud/37a350be939b4fba968caf93d865b734/file_show?path=
 
 # Lab 2
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2Fpaper.html
+
+# Lab 3A
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FEvo_Geno_Lab3A_starting_with_data_BenEarle.html
+
+# Lab 3B
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FEvo_Geno_Lab3B_Manipulating_data_Ben_Earle.html
