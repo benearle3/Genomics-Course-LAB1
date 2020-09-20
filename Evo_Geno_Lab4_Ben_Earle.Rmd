@@ -1,0 +1,95 @@
+---
+title: "Evo_Geno_Lab4_Ben_Earle"
+author: "Ben Earle"
+date: "9/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+report_03_11_2020 <-   read_csv(url("https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv")) %>%
+  rename(Country_Region = "Country/Region", Province_State = "Province/State")
+```
+
+```{r}
+str(report_03_11_2020)
+```
+```{r}
+view(report_03_11_2020)
+```
+```{r}
+# if (!require("DT")) install.packages('DT')
+xfun::session_info('DT')
+```
+```{r}
+library(DT)
+```
+```{r}
+datatable(report_03_11_2020)
+```
+## Exercises (Part 1) 
+
+## 1
+```{r}
+report_03_12_2020 <- read_csv(url("https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/03-12-2020.csv")) %>% rename(Country_Region = "Country/Region", Province_State = "Province/State")
+```
+```{r}
+str(report_03_12_2020)
+```
+```{r}
+view(report_03_12_2020)
+```
+```{r}
+report_09_12_2020 <- read_csv(url("https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/09-12-2020.csv"))
+```
+```{r}
+str(report_09_12_2020)
+```
+```{r}
+view(report_09_12_2020)
+```
+## There have been several changes in the format of the daily reports from March 12th to September 12th. The first being that they changed the headers for province_state and country_region to underscores, making them more compatible with R. They also added several columns. They now include the number of active cases vs number of recovered cases and then a column for both of these numbers combined. They also now have columns for incidence rates and case-fatality ratios for each region. 
+
+##2
+```{r}
+report_03_12_2020 %>% group_by(Country_Region) %>% summarize(Deaths)
+```
+```{r}
+report_09_12_2020 %>% group_by(Country_Region) %>% summarize(Deaths)
+```
+## 3
+```{r}
+report_03_12_2020 %>% filter(!is.na(Country_Region)) %>% group_by(Province_State) %>% filter(Country_Region == "US")%>% summarize(Deaths) 
+```
+
+```{r}
+report_09_12_2020 %>% filter(!is.na(Country_Region)) %>% group_by(Province_State) %>% filter(Country_Region == "US")%>% summarize(Deaths) 
+```
+
+##4
+
+```{r}
+report_03_12_2020_plot <- report_03_12_2020 %>% filter(!is.na(Country_Region)) %>% group_by(Province_State) %>% filter(Country_Region == "US")%>% summarize(Deaths) %>% arrange(desc(Deaths)) %>% slice_head(n=10)
+```
+```{r}
+report_09_12_2020 %>% filter(!is.na(Country_Region)) %>% filter(Country_Region == "US")%>% group_by(Province_State) %>% summarize(Deaths) %>% arrange(desc(Deaths)) %>% slice_head(n=10)
+```
+
+## Exercises (Part 2)
+
+##5 
+```{r}
+  ggplot(data= report_03_12_2020, aes(x = Deaths,  y = Country_Region)) + 
+    geom_point(stat = 'identity') 
+```
+```{r}
+  ggplot(data= report_09_12_2020, aes(x = Deaths,  y = Country_Region)) + 
+    geom_point(stat = 'identity') 
+```

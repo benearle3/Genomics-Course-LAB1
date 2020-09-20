@@ -1,0 +1,111 @@
+---
+title: "Evo_Geno_Lab4a_Ben_Earle.Rmd"
+author: "Ben Earle"
+date: "9/20/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r, include=FALSE}
+surveys_complete <- read.csv("data/surveys_complete.csv")
+```
+
+
+```{r}
+ggplot(data = surveys_complete, aes(x = weight, y = hindfoot_length)) +
+  geom_point()
+```
+
+##Challenge
+```{r}
+install.packages("hexbin")
+```
+
+```{r}
+library("hexbin")
+```
+
+```{r}
+ggplot(data = surveys_complete, aes(x = weight, y = hindfoot_length)) +
+  geom_hex()
+```
+## The advantage of the hex plot is that it allows you to see how many animals are at each hindfoot - weight ratio. 
+```{r}
+ggplot(data = surveys_complete, aes(x = weight, y = hindfoot_length)) +
+    geom_point(alpha = 0.1)
+```
+
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = weight, y = hindfoot_length)) +
+    geom_point(alpha = 0.1, aes(color = species_id))
+```
+
+## Challenge #2
+```{r}
+ggplot(data = surveys_complete, 
+       mapping = aes(x = species_id, y = weight)) +
+   geom_point(aes(color = plot_type))
+```
+
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
+    geom_boxplot()
+```
+
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
+    geom_boxplot(alpha = 0) +
+    geom_jitter(alpha = 0.3, color = "tomato")
+```
+##Challenge #3
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight)) +
+    geom_violin()
+```
+
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = species_id, y = weight,)) +
+    geom_violin()+
+  scale_y_log10()
+```
+
+```{r}
+ggplot(data = surveys_complete, mapping = aes(x = species_id, y = hindfoot_length)) +
+    geom_boxplot(alpha = 0) +
+    geom_jitter(alpha = 0.3, color = "tomato")
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
