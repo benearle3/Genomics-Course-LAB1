@@ -1,0 +1,143 @@
+---
+title: "Evo_Geno_Lab3_Data_Wrangling_BenEarle"
+author: "Ben Earle"
+date: "9/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library (tidyverse)
+```
+ 
+ ```{r eval=FALSE}
+ download.file(url="https://ndownloader.figshare.com/files/2292169",
+              destfile = "data/portal_data_joined.csv")
+```
+
+```{r}
+surveys <- read.csv("data/portal_data_joined.csv")
+```
+
+```{r}
+head(surveys)
+```
+## Try Also
+
+```{r eval=FALSE}
+View(surveys)
+```
+
+```{r}
+str(surveys)
+```
+
+```{r}
+dim(surveys)
+```
+
+```{r}
+nrow(surveys)
+```
+```{r}
+ncol(surveys)
+```
+```{r}
+tail(surveys)
+```
+
+## Challenge
+##1 The class of the object surveys is data.frame
+##2 There are 34,786 rows and 13 columns in the data frame. 
+##3 There are 48 species
+
+## Indexing and subsetting data frames
+##1
+```{r}
+surveys_200 <- surveys[200, ]
+```
+##2
+```{r}
+n_rows <- nrow(surveys)
+surveys_last <- surveys[n_rows, ]
+```
+##3
+```{r}
+surveys_middle <- surveys[n_rows / 2, ]
+```
+##4
+```{r}
+surveys_head <- surveys[-(7:n_rows), ]
+```
+
+##Factors Challenge
+```{r}
+sex <- factor(c("male", "female", "female", "male"))
+```
+
+```{r}
+levels(sex)[2:3] <- c("female", "male")
+sex <- factor(sex, levels = c("female", "male", "undetermined"))
+plot(sex)
+```
+
+```{r}
+animal_data <- data.frame(
+          animal = c("dog", "cat", "sea cucumber", "sea urchin"),
+          feel = c("furry", "smooth", "squishy", "spiny"),
+          weight = c(45, 8, 1.1, 0.8)
+          )
+```
+
+```{r}
+country_climate <- data.frame(
+       country = c("Canada", "Panama", "South Africa", "Australia"),
+       climate = c("cold", "hot", "temperate", "hot/temperate"),
+       temperature = c(10, 30, 18, 15),
+       northern_hemisphere = c(TRUE, TRUE, FALSE, FALSE),
+       has_kangaroo = c(FALSE, FALSE, FALSE, TRUE)
+       )
+```
+
+```{r}
+str(country_climate)
+```
+
+```{r}
+library("lubridate")
+```
+
+```{r}
+my_date <- ymd(paste("2020", "1", "1", sep = "-")) 
+str(my_date)
+```
+
+```{r eval=FALSE}
+paste(surveys$year, surveys$month, surveys$day, sep = "-")
+```
+
+```{r eval=FALSE}
+ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+```
+
+```{r}
+surveys$date <- ymd(paste(surveys$year, surveys$month, surveys$day, sep = "-"))
+```
+
+```{r eval=FALSE}
+str(surveys)
+```
+
+```{r}
+summary(surveys$date)
+```
+
+```{r}
+missing_dates <- surveys[is.na(surveys$date), c("year", "month", "day")]
+
+head(missing_dates)
+```
