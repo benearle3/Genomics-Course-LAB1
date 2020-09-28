@@ -32,3 +32,6 @@ https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=
 ## Lab 5 - Data visualization part 2
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_5_Part_Data_Visualization_part2__EvoGeno_Ben_Earle.html
 
+##Lab 5
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_5_EvoGeno_Ben_Earle.html
+
