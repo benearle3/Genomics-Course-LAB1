@@ -18,10 +18,10 @@ https://benearle3.rstudio.cloud/37a350be939b4fba968caf93d865b734/file_show?path=
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2Fpaper.html
 
 # Lab 3A
-https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FEvo_Geno_Lab3A_starting_with_data_BenEarle.html
+[Lab 3A](Evo_Geno_Lab3A_starting_with_data_BenEarle.html)
 
 # Lab 3B
-https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FEvo_Geno_Lab3B_Manipulating_data_Ben_Earle.html
+[Lab 3B](Evo_)
 
 # Lab 4
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FEvo_Geno_Lab4_Ben_Earle.html
@@ -32,9 +32,19 @@ https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=
 ## Lab 5 - Data visualization part 2
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_5_Part_Data_Visualization_part2__EvoGeno_Ben_Earle.html
 
-##Lab 5
+## Lab 5
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_5_EvoGeno_Ben_Earle.html
 
 ## Lab 5 Extra
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_5_Extra.html
+
+## Lab 6 Tutorial & Exercises
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_6_Data_Maps_-_Interactive_Graphs_BenEarle.html
+
+## Lab 6 - report
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2FLab_6_Covid_Report.html
+
+
+## Lab 6 Shiny Apps
+https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/p/a59740b6/
 
