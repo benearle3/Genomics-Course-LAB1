@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## R Markdown
 
 # Lab 1
-https://benearle3.rstudio.cloud/37a350be939b4fba968caf93d865b734/file_show?path=%2Fcloud%2Fproject%2FLab1_BenEarle.html
+[Lab 1](Lab_1_Evo_Geno_BenEarle.html)
 
 # Lab 2
 https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2Fpaper.html
@@ -47,4 +47,6 @@ https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=
 
 ## Lab 6 Shiny Apps
 [Lab 6 shiny apps]
+
+
 
