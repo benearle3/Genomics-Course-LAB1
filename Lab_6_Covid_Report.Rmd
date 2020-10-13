@@ -299,3 +299,28 @@ ggplotly(
 )
 ```
 
+# REFERENCES
+
+## 1
+title: "Evolutionary Genomics & Bioinformatics"
+author: "Jeffrey Blanchard"
+date: "2/26/2020"
+output: html_document
+bibliography: data/references.bib
+
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
+
+## 2
+title: "Draw Geographical Maps"
+author: "Eric Anderson"
+date: "4/03/2018"
+output: pdf_document
+bibliography: https://cran.r-project.org/web/packages/maps/maps.pdf
+
+##3 
+title: "An interactive web-based dashboard to track COVID-19 in real time"
+author: "Ensheng Dong, Hongru Du, Lauren Gardner"
+date: "2/19/2020"
+output: html_document
+bibliography: https://www.sciencedirect.com/science/article/pii/S1473309920301201?via%3Dihub
+
