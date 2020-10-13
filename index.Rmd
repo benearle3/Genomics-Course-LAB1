@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 [Lab 1](Lab_1_Evo_Geno_BenEarle.html)
 
 # Lab 2
-https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=%2Fcloud%2Fproject%2Fpaper.html
+[Lab2](Lab_2_EvoGeno_BenEarle.html)
 
 # Lab 3A
 [Lab 3A](Evo_Geno_Lab3A_starting_with_data_BenEarle.html)
@@ -48,5 +48,15 @@ https://benearle3.rstudio.cloud/3088934a932e4eaba1963135f4420d78/file_show?path=
 ## Lab 6 Shiny Apps
 [Lab 6 shiny apps]
 
+
+# REFERENCES
+
+title: "Evolutionary Genomics & Bioinformatics"
+author: "Jeffrey Blanchard"
+date: "2/26/2020"
+output: html_document
+bibliography: data/references.bib
+  
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
 
