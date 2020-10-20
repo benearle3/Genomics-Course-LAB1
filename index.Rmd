@@ -48,6 +48,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Lab 6 Shiny Apps
 [Lab 6 shiny apps]
 
+## Lab 7 RNA-Seq workflow: gene-level exploratory analysis and differential expression
+[Lab 7](Lab_7_EvoGeno_BenEarle.html)
 
 # REFERENCES
 
