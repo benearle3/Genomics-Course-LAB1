@@ -51,6 +51,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Lab 7 RNA-Seq workflow: gene-level exploratory analysis and differential expression
 [Lab 7](Lab_7_EvoGeno_BenEarle.html)
 
+## Lab 8 - Sequence Alignment, Phylogenetic Analysis and Tree Visualization
+[Lab 8](Lab_8_EvoGeno_BenEarle.html)
+
+
 # REFERENCES
 
 title: "Evolutionary Genomics & Bioinformatics"
