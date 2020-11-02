@@ -54,6 +54,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Lab 8 - Sequence Alignment, Phylogenetic Analysis and Tree Visualization
 [Lab 8](Lab_8_EvoGeno_BenEarle.html)
 
+## Lab 9 - Programming in R - Regular Expressions
+[Lab 9](Lab_9a_EvoGeno_Ben_Earle.html)
 
 # REFERENCES
 
