@@ -1,0 +1,218 @@
+---
+title: "Lab_9x_EvoGeno_BenEarle"
+author: "Ben Earle"
+date: "11/3/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+
+# Control Structures
+## Control structures in R allow you to control the flow of execution of a series of R expressions. 
+## Commonly used control structures are
+### if and else: testing a condition and acting on it
+### for: execute a loop a fixed number of times
+### while: execute a loop while a condition is true
+## Most control structures are not used in interactive sessions, but rather when writing functions or longer expresisons.
+
+
+# Conditional statements with if-else
+### The if-else combination is probably the most commonly used control structure in R (or perhaps any language). This structure allows you to test a condition and act on it depending on whether it’s true or false.
+
+## The if statement alone
+### if(<condition>) {
+###        ## do something
+### } 
+### Continue with rest of code
+
+## The above code does nothing if the condition is false. If you have an action you want to execute when the condition is false, then you need an else clause.
+### if(<condition>) {
+###        ## do something
+### } 
+### else {
+###        ## do something else
+### }
+
+## Example if/else
+```{r}
+x <- runif(1, 0, 10) 
+```
+```{r}
+if(x > 3) {
+        y <- 10
+} else {
+        y <- 0
+}
+```
+### The value of y is set depending on whether x > 3 or not.
+
+
+#Important operators
+## Comparison operators
+### == (equal)
+### != (not equal)
+### > (greater than)
+### >= (greater than or equal)
+### < (less than)
+### <= (less than or equal)
+## Logical operators
+### & (and)
+### | (or)
+### ! (not)
+
+# for Loops
+## In R, for loops take an interator variable and assign it successive values from a sequence or vector. 
+```{r}
+for(i in 1:10) {
+        print(i)
+}
+```
+
+```{r}
+x <- c("a", "b", "c", "d")
+for(i in 1:4) {
+        ## Print out each element of 'x'
+        print(x[i])  
+}
+```
+
+## The seq_along() function is commonly used in conjunction with for loops in order to generate an integer sequence based on the length of an object (in this case, the object x)
+```{r}
+for(i in seq_along(x)) {   
+        print(x[i])
+}
+```
+## You do not have to to use an index-type variable.
+```{r}
+for(letter in x) {
+        print(letter)
+}
+```
+
+## Nested for loops
+## for loops can be nested inside of each other
+## Nested loops are commonly needed for multidimensional or hierarchical data structures (e.g. matrices, lists).
+```{r}
+x <- matrix(1:6, 2, 3)
+for(i in seq_len(nrow(x))) {
+        for(j in seq_len(ncol(x))) {
+                print(x[i, j])
+        }   
+}
+```
+### Nested loops are commonly needed for multidimensional or hierarchical data structures (e.g. matrices, lists).
+
+# while Loops
+## While loops begin by testing a condition. If it is true, then they execute the loop body. Once the loop body is executed, the condition is tested again, and so forth, until the condition is false, after which the loop exits.
+
+```{r}
+count <- 0
+while(count < 10) {
+        print(count)
+        count <- count + 1
+}
+```
+
+## Sometimes there will be more than one condition in the test
+```{r}
+z <- 5
+set.seed(1)
+while(z >= 3 && z <= 10) {
+        coin <- rbinom(1, 1, 0.5)
+        
+        if(coin == 1) {  ## random walk
+                z <- z + 1
+        } else {
+                z <- z - 1
+        } 
+}
+print(z)
+```
+### Conditions are always evaluated from left to right. For example, in the above code, if z were less than 3, the second test would not have been evaluated.
+
+
+# Functions
+### The writing of a function allows a developer to create an interface to the code, that is explicitly specified with a set of parameters. 
+
+## Functions in R
+### Functions can be passed as arguments to other functions. This is very handy for the various apply functions, like lapply() and sapply() that we will learn below.
+### Functions can be nested, so that you can define a function inside of another function
+
+## Your First Function
+```{r}
+f <- function() {
+        ## This is an empty function
+}
+## Functions have their own class
+class(f)
+```
+## Execute this function
+```{r}
+f()
+```
+## The next thing we can do is create a function that actually has a non-trivial function body.
+```{r}
+f <- function() {
+        cat("usuhh, dude!\n")
+}
+f()
+```
+```{r}
+f <- function(num) {
+        usuh <- "usuhh, dude!\n"
+        for(i in seq_len(num)) {
+                cat(usuh)
+        }
+        chars <- nchar(usuh) * num
+        chars
+}
+meaningoflife <- f(3)
+```
+```{r}
+print(meaningoflife)
+```
+
+## Here we set the default value for num to be 1, so that if the function is called without the num argument being explicitly specified, then it will print “usuhh, dude!” to the console once.
+
+```{r}
+f <- function(num = 1) {
+        usuh <- "usuhh, dude!\n"
+        for(i in seq_len(num)) {
+                cat(usuh)
+        }
+        chars <- nchar(usuh) * num
+        chars
+}
+f()    ## Use default value for 'num'
+```
+```{r}
+f(2)
+```
+
+# Looping on the Command Line using apply family in R base or purrr in Tidyverse
+## for and while loops are useful in programming but not when working on the command line. The apply and purrr functions in R are designed to avoid  use of loop constructs in the command line.
+
+
+
+# REFERENCES
+
+title: "R for Data Science"
+author: "Roger Peng"
+date: "January 2017"
+output: html_document
+bibliography: https://r4ds.had.co.nz/functions.html
+
+title: "Evolutionary Genomics & Bioinformatics"
+author: "Jeffrey Blanchard"
+date: "2/26/2020"
+output: html_document
+bibliography: data/references.bib
+  
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
